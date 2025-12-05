@@ -10,7 +10,7 @@ search.search({
   debug: false,
   client: {
     base: "https://corpus-search.acdh.oeaw.ac.at/",
-    corpname: "{{ cookiecutter.directory_name }}", // make sure the corpus name is correct
+    corpname: "{{ cookiecutter.directory_name | replace('-', '') }}", // make sure the corpus name is correct
     attrs: "word,lemma,pos,landingPageURI",
     structs: "sen",
     refs: "doc.id,doc.title",
